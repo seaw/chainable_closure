@@ -2,9 +2,9 @@
 
 var assert = require('assert');
 
-var sum = require('.');
+var sum = require('.')['new closure every time'];
 
-describe('sum()', function() {
+describe('sum(), variant: new closure every time', function() {
   describe('return type', function () {
     it('should return a number when the argument is not present', function () {
       assert.equal('number', typeof sum());

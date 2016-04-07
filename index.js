@@ -5,6 +5,8 @@ function chainable(current_val) {
     (new_arg === undefined) ? current_val : chainable(current_val + new_arg);
 }
 
-var sum = chainable(0);
+var variants = {
+  'new closure every time': chainable(0)
+}
 
-module.exports = sum;
+module.exports = variants;
