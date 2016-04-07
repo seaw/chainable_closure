@@ -5,7 +5,7 @@
   "main": "./index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha test.js",
-    "watch": "node_modules/.bin/mocha -w --reporter min test.js"
+    "watch": "node_modules/.bin/mocha -w --reporter spec test.js"
   },
   "keywords": [
     "closure"

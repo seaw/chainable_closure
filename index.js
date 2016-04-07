@@ -5,7 +5,9 @@ function sum(arg) {
     return 0;
   }
 
-  return function(){};
+  return function(){
+    return arg;
+  };
 }
 
 module.exports = sum;
