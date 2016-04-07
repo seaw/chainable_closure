@@ -1,19 +1,23 @@
 'use strict'
 
-function sum(arg) {
-  if (arg === undefined) {
-    return 0;
-  }
+function closure_maker() {
+  var result = 0;
 
-  var result = arg;
-
-  return function inner(arg2){
-    if (arg2 === undefined) {
+  return function closure(val) {
+    if (val === undefined) {
       return result;
     }
-    result += arg2;
-    return inner;
+
+    result += val;
+
+    return closure;
   };
+}
+
+function sum(init_val) {
+  var closure = closure_maker();
+
+  return closure(init_val);
 }
 
 module.exports = sum;
