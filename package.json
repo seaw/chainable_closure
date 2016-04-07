@@ -1,0 +1,18 @@
+{
+  "name": "chainable_closure",
+  "version": "0.1.0",
+  "description": "Sample of chainable closure",
+  "main": "./index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha test.js",
+    "watch": "node_modules/.bin/mocha -w --reporter min test.js"
+  },
+  "keywords": [
+    "closure"
+  ],
+  "author": "WanCW <contact@wancw.idv.tw>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "2.4.5"
+  }
+}
