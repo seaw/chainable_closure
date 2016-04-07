@@ -5,8 +5,11 @@ function sum(arg) {
     return 0;
   }
 
-  return function(){
-    return arg;
+  return function inner(arg2){
+    if (arg2 === undefined) {
+      return arg;
+    }
+    return inner;
   };
 }
 

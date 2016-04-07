@@ -13,6 +13,18 @@ describe('sum()', function() {
     it('should return a function when the argument is present', function () {
       assert.equal('function', typeof sum(0));
     });
+
+    it('returned function should behave in the same way', function () {
+      var f = sum(0);
+      assert.equal('number', typeof f());
+      assert.equal('function', typeof f(0));
+    });
+
+    it('could make chained call as many as wanted', function () {
+      var f = sum(0)(0)(0);
+      assert.equal('number', typeof f());
+      assert.equal('function', typeof f(0));
+    });
   })
 
   describe('return value', function () {
