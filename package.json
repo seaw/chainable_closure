@@ -2,6 +2,10 @@
   "name": "chainable_closure",
   "version": "0.1.0",
   "description": "Sample of chainable closure",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seaw/chainable_closure.git"
+  },
   "main": "./index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha test.js",
