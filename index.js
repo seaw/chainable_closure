@@ -1,7 +1,8 @@
 'use strict'
 
-var chainable = (current_val) =>
-    (new_arg) =>
-      (new_arg === undefined) ? current_val : chainable(current_val + new_arg)
+function chainable(init, f) {
+  var c = (arg) => (next) => (next === undefined) ? arg : c(f(arg, next), f);
+  return c(init);
+}
 
-module.exports = chainable(0);
+module.exports = chainable;

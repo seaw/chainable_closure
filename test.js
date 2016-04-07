@@ -2,9 +2,10 @@
 
 var assert = require('assert');
 
-var sum = require('.');
+var chainable = require('.');
 
-describe('sum()', function() {
+describe('chainable sum()', function() {
+  var sum = chainable(0, (x, y) => x + y);
 
   describe('returned type', function () {
     it('should return a number when the argument is not present', function () {
