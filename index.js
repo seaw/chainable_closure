@@ -1,16 +1,10 @@
 'use strict'
 
-function sum(arg) {
-  if (arg === undefined) {
-    return 0;
-  }
-
-  return function inner(arg2){
-    if (arg2 === undefined) {
-      return arg;
-    }
-    return inner;
-  };
+function chainable(current_val) {
+  return (new_arg) =>
+    (new_arg === undefined) ? current_val : chainable(current_val + new_arg);
 }
+
+var sum = chainable(0);
 
 module.exports = sum;
