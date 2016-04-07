@@ -9,7 +9,7 @@ function sum(arg) {
     if (arg2 === undefined) {
       return arg;
     }
-    return inner;
+    return sum(arg + arg2);
   };
 }
 
