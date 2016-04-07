@@ -35,5 +35,10 @@ describe('sum()', function() {
     it('should return the same value when called with arguments one times', function () {
       assert.equal(3, sum(3)());
     });
+
+    it('should return sum of each arguments when called with arguments multiple times', function () {
+      assert.equal(7, sum(3)(4)());
+      assert.equal(12, sum(3)(4)(5)());
+    });
   })
 });
